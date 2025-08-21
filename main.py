@@ -608,19 +608,10 @@ def main():
 
             # Make the checkbox more prominent
             st.markdown("---")
-            agree_terms = st.checkbox(
-                "✅ I agree to the terms and conditions and confirm the originality of this work *",
-                help="You must agree to the terms to submit your patent application"
-            )
-            
-            # Show button status
-            if not agree_terms:
-                st.warning("⚠️ Please check the agreement checkbox above to enable the submit button.")
 
             # Form submission
             submitted = st.form_submit_button(
                 "🚀 Submit Patent Application",
-                disabled=not agree_terms,
                 use_container_width=True,
                 type="primary"
             )
@@ -952,4 +943,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
