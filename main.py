@@ -632,10 +632,6 @@ def main():
                         st.error(f"❌ Please fill in the following required fields: {', '.join(missing_fields)}")
                         st.stop()
                     
-                    if not agree_terms:
-                        st.error("❌ Please agree to the terms and conditions.")
-                        st.stop()
-                    
                     # Show processing message
                     with st.spinner("Processing your patent application..."):
                         # File processing
@@ -943,5 +939,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
